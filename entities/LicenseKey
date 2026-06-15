@@ -1,0 +1,43 @@
+{
+  "name": "LicenseKey",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "The license key code"
+    },
+    "tier_name": {
+      "type": "string",
+      "description": "Which tier this key belongs to"
+    },
+    "duration": {
+      "type": "string",
+      "enum": [
+        "1day",
+        "1week",
+        "1month",
+        "1year",
+        "forever"
+      ],
+      "description": "Duration of the license"
+    },
+    "is_used": {
+      "type": "boolean",
+      "default": false
+    },
+    "used_by_email": {
+      "type": "string"
+    },
+    "used_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "key"
+  ]
+}
